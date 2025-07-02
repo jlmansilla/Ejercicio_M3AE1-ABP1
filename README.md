@@ -27,7 +27,7 @@ Un sitio web responsivo para una tienda de ropa ecológica, desarrollado con met
 ├── assets/
 │   ├── css/
 │   │   ├──  
-│   │   │__variables.css    # Variables CSS
+│   │   │__variables.css   # Variables CSS
 │   │   └── style.css      # Archivo principal
 │   ├── img/               # Imágenes del proyecto
 │   ├── js/                # Scripts JavaScript
