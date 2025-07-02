@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VerdeModa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">  <!-- 
+    ¿Qué hace?
+    Le dice al navegador que establezca una conexión temprana (preconexión) con fonts.googleapis.com.
+    ¿Por qué es útil?
+    Así el navegador puede empezar a preparar la conexión antes de que realmente se necesiten los recursos de Google Fonts, lo que mejora la velocidad de carga de la página.
+ -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- 
+    ¿Qué hace?
+    Igual que la anterior, pero para fonts.gstatic.com, que es el servidor donde realmente se alojan los archivos de las fuentes.
+    ¿Por qué el atributo crossorigin?
+    Se usa porque la petición puede involucrar recursos de distintos orígenes (cross-origin), y esto permite que el navegador maneje correctamente los permisos y la caché.
+-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- 
+        ¿Qué hace?
+        Esta línea importa las fuentes de Google Fonts que después puedes usar en tu CSS:
+            La familia Montserrat en pesos (grosor) 400, 600 y 700.
+            La familia Playfair Display en peso 700.
+        ¿Por qué es importante?
+        Permite que tu página web use estas tipografías personalizadas, mejorando la apariencia visual.
+-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- 
+        ¿Qué hace?
+        Enlaza un archivo CSS externo llamado styles.css que contiene los estilos de tu página.
+        ¿Por qué es útil?
+        Permite separar el contenido HTML de los estilos, facilitando el mantenimiento y la organización del código.
+    -->    
+</head>
+<body>
+  
+    <!-- ======================= HEADER ======================= -->
+    <header class="header" id="header">
+      <div class="header__container container">
+        <a href="#" class="header__logo">VerdeModa</a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#home" class="nav__link">Inicio</a></li>
+            <li class="nav__item"><a href="#catalogo" class="nav__link">Catálogo</a></li>
+            <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
+          </ul>
+          <button class="nav__toggle" aria-label="Abrir menú">
+            &#9776; <!-- Este es el ícono de hamburguesa -->
+          </button>
+        </nav>
+      </div>
+    </header>          
+            
+    <main>    
+        
+    <!-- ======================= HOME ======================= -->
+     <div id="home" class="home">
+        <section class="hero">
+          <div class="hero__content">
+                <h1 class="hero__title">Viste consciente, vive sostenible</h1>
+                <p class="hero__slogan">El lugar perfecto para encontrar tu ropa y cuidar el planeta.</p>                
+          </div>
+        </section>
+        <section class="productos">
+          <h2 class="productos__title">Productos destacados</h2>
+          <div class="productos__container">
+            <div class="producto-card">
+              <img src="assets/img/polera-basica-algodon.svg" alt="Polera algodón" class="producto-card__img">
+              <div class="producto-card__info">
+                <h3 class="producto-card__title">Polera básica algodón</h3>
+                <p class="producto-card__desc">Hecha con algodón orgánico.</p>
+                <p class="producto-card__talla">Talla: M</p>
+                <button class="producto-card__btn">Comprar</button>
+              </div>
+            </div>          
+            <div class="producto-card">
+              <img src="assets/img/chaqueta-bosque-reciclada.svg" alt="chaqueta-bosque" class="producto-card__img">
+              <div class="producto-card__info">
+                <h3 class="producto-card__title">Chaqueta bosque</h3>
+                <p class="producto-card__desc">Material reciclado.</p>
+                <p class="producto-card__talla">Talla: M</p>
+                <button class="producto-card__btn">Comprar</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+     </div>
+
+    <!-- ======================= CATÁLOGO ======================= -->
+        <div id="catalogo">
+            <section class="catalogo">
+              <div class="catalogo__container"></div>
+                <h2 class="catalogo__titulo">Nuestro Catálogo</h2>
+                <div class="catalogo__filtros">
+                  <button class="catalog__filter-btn catalog__filter-btn--active" data-filter="all">Todos</button>
+                  <button class="catalog__filter-btn" data-filter="vestuario">Vestuario</button>
+                  <button class="catalog__filter-btn" data-filter="accesorios">Accesorios</button>
+                </div>              
+                <div class="catalogo-grid">
+                  <div class="producto-card" data-category="vestuario">
+                    <img src="assets/img/polera-basica-algodon.svg" alt="Polera algodón" class="producto-card__img">
+                    <div class="producto-card__info">
+                      <h3 class="producto-card__title">Polera básica algodón</h3>
+                      <p class="producto-card__desc">Hecha con algodón orgánico.</p>
+                      <p class="producto-card__talla">Talla: M</p>
+                      <button class="producto-card__btn">Comprar</button>
+                    </div>
+                  </div>             
+                  <div class="producto-card" data-category="vestuario">
+                    <img src="assets/img/chaqueta-bosque-reciclada.svg" alt="chaqueta-bosque" class="producto-card__img">
+                    <div class="producto-card__info">
+                      <h3 class="producto-card__title">Chaqueta bosque</h3>
+                      <p class="producto-card__desc">Material reciclado.</p>
+                      <p class="producto-card__talla">Talla: M</p>
+                      <button class="producto-card__btn">Comprar</button>
+                    </div>
+                  </div>                
+                  <div class="producto-card" data-category="accesorios">
+                    <img src="assets/img/bolso-tierra-yute.svg" alt="Bolso yute" class="producto-card__img">
+                    <div class="producto-card__info">
+                      <h3 class="producto-card__title">Bolsa tierra Yute</h3>
+                      <p class="producto-card__desc">Bolsa material orgánico.</p>
+                      <p class="producto-card__talla">Talla: N/A</p>
+                      <button class="producto-card__btn">Comprar</button>
+                    </div>
+                  </div>          
+                  <div class="producto-card" data-category="accesorios">
+                    <img src="assets/img/collar-semilla-tagua.svg" alt="collar-semilla" class="producto-card__img">
+                    <div class="producto-card__info">
+                      <h3 class="producto-card__title">Collar de Semmilla</h3>
+                      <p class="producto-card__desc">Material reciclado.</p>
+                      <p class="producto-card__talla">Talla: N/A</p>
+                      <button class="producto-card__btn">Comprar</button>
+                    </div>
+                  </div>                
+                </div>
+              </section>
+            </div>
+    <!-- ======================= CONTACTO ======================= -->
+      <div class="contacto" id="contacto">
+        <section class="contacto__container">
+          <div class="contacto__contenido">
+            <h2 class="contacto__titulo">Hablemos</h2>
+            <p>¿Tienes alguna pregunta o quieres hacer un pedido especial? ¡Estamos aquí para ayudarte! Contáctanos directamente a través de WhatsApp.</p>
+            <a href="https://wa.me/56912345678?text=Hola!%20Vengo%20del%20sitio%20web%20de%20VerdeModa%20y%20quisiera%20consultar%20por..." target="_blank" class="btn btn--primary">Contactar por WhatsApp</a>
+          </div>
+        </section>
+      </div>
+    </main>  
+
+    <!-- ======================= FOOTER ======================= -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 VerdeModa. Todos los derechos reservados.</p>
+            <p>Diseñado con ♥ por un futuro más verde.</p>
+        </div>
+    </footer>.</p>
+        </div>
+    </footer>
+
+
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
